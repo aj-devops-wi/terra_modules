@@ -1,3 +1,11 @@
+terraform{
+  backend "s3"{
+    bucket = "training-table3-aj"
+    key = "terra/state/jenkins1"
+    region = "us-west-2"
+  }
+}
+
 data "aws_availability_zones" "available" {}
 
 resource "aws_instance" "instance"{
