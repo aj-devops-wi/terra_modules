@@ -1,5 +1,4 @@
 variable "remote_private_key"{
-  type = string
 }
 
 module "frontend" {
