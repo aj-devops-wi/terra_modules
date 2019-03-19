@@ -21,3 +21,5 @@ variable "modules_to_install" {
     backend = ["sudo apt-get install -y tomcat"]
   }
 }
+variable "fe_or_be"{
+}

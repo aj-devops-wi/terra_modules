@@ -17,8 +17,8 @@ resource "aws_instance" "instance"{
     connection {
       type = "ssh"
       user = "ubuntu"
-      private_key = "${remote_private_key}"
+      private_key = "${var.remote_private_key}"
     }
-    inline =    ["[var.modules_to_install[var.type]"]
+    inline =    ["[var.modules_to_install[var.fe_or_be]"]
   }
 }

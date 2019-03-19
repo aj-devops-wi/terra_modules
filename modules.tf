@@ -3,14 +3,14 @@ variable "remote_private_key"{
 
 module "frontend" {
   source = "./aws_instances"
-  type = "frontend"
+  fe_or_be = "frontend"
 }
 
 module "backend"{
   source = "./aws_instances"
   region = "ca-central-1"
   total_instances = 2
-  type = "backend"
+  fe_or_be = "backend"
 }
 
 output "front_end_ips"{
