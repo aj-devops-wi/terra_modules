@@ -13,4 +13,12 @@ resource "aws_instance" "instance"{
   ami = "${var.amis[var.region]}"
   instance_type = "t2.micro"
   availability_zone = "${data.aws_availability_zones.available.names[count.index]}"
+  provisioner "remote-exec" {
+    connection {
+      type = "ssh"
+      user = "ubuntu"
+      private_key = "${remote_private_key}"
+    }
+    inline =    ["[var.modules_to_install[var.type]"]
+  }
 }

@@ -13,3 +13,11 @@ variable "region" {
 variable "total_instances" {
   default = 1
 }
+
+variable "modules_to_install" {
+  type = "map"
+  default = {
+    frontend = ["sudo apt-get install -y python"]
+    backend = ["sudo apt-get install -y tomcat"]
+  }
+}
