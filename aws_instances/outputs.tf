@@ -1,3 +1,3 @@
 output "ips"{
-  value = "${aws_instance.instance.*.public.ip}"
+  value = "${aws_instance.instance.*.public_ip}"
 }
