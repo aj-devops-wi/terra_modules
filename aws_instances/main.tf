@@ -1,6 +1,6 @@
 terraform{
   backend "s3"{
-    bucket = "training-table3-aj"
+    bucket = "sample-table3-aj"
     key = "terra/state/jenkins1"
     region = "us-west-2"
   }
